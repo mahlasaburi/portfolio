@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    width: 15%;
+    height: 100vh;
+    background-color: #000;
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.menu>ul{
+    width: 100%;
+    background-color: midnightblue;
+}
+
+.menu>ul>li{
+    width: inherit;
+    height: 60px;
+    border: 1px solid white;
+    position: relative;
+}
+
+.menu>ul>li>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.459);
+    color: bisque;
+    position: relative;
+}
+
+.menu>ul>li::before{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;left: 0;
+}
+
+.menu>ul>li:nth-last-of-type(5)::before{
+    background-color: crimson;
+}
+
+.menu>ul>li:nth-last-of-type(1)::before{
+    background-color: darkmagenta;
+}
+
+.menu>ul>li:nth-last-of-type(3)::before{
+    background-color: rgb(85, 202, 101);
+}
+
+.menu>ul>li:hover::before{
+    width: 100%;
+}
+
+.menu>ul>li>a:hover{
+    color: #000;
+}
+
+.menu>ul>li>ul{
+    background-color: #000;
+    position: absolute;
+    top: 0;left: 100%;
+    width: 200px;
+    display: none;
+    flex-wrap: wrap;
+}
+
+.menu>ul>li:hover>ul{
+    display: flex;
+}
+
+.menu>ul>li>ul>li{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    border-bottom: 1px solid #000;
+}
+
+.menu>ul>li>ul>li>a{
+    color: #000;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.menu>ul>li>ul>li>a:hover{
+    background-color: rgb(71, 30, 117);
+    color: antiquewhite;
+}
